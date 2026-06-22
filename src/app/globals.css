@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-wiki-text;
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+
+  a {
+    @apply text-wiki-link;
+  }
+  a:hover {
+    @apply underline;
+  }
+}
+
+@layer components {
+  .wiki-heading {
+    font-family: var(--font-serif), serif;
+  }
+
+  /* Prose styling for PortableText article bodies */
+  .wiki-article {
+    @apply text-[0.95rem] leading-7;
+  }
+  .wiki-article > * + * {
+    @apply mt-3;
+  }
+  .wiki-article h2 {
+    @apply wiki-heading text-xl font-bold border-b border-wiki-border mt-8 mb-2 pb-1;
+  }
+  .wiki-article h3 {
+    @apply wiki-heading text-lg font-bold mt-6 mb-2;
+  }
+  .wiki-article h4 {
+    @apply font-bold mt-4 mb-1;
+  }
+  .wiki-article ul {
+    @apply list-disc pl-6;
+  }
+  .wiki-article ol {
+    @apply list-decimal pl-6;
+  }
+  .wiki-article li + li {
+    @apply mt-1;
+  }
+  .wiki-article blockquote {
+    @apply border-l-2 border-wiki-border pl-4 text-wiki-muted italic;
+  }
+  .wiki-article strong {
+    @apply font-semibold;
+  }
+}
