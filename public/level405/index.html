@@ -535,7 +535,7 @@ window.L405AUDIO={"wind":{"mp3":"//uAZAAAAh0AVu0EYAwr4BsdoIwBjHCrTbmmgBGKmyy3MrI
   }
   function breathGain() { var n = nearness(); return BR_MIN + BR_MAX * n * n; }
   function windGain() { return 0.6 * (1 - 0.45 * nearness()); }
-  var BR_MIN = parseFloat(Q.get("brmin") || "0.04"), BR_MAX = parseFloat(Q.get("brmax") || "1.1");
+  var BR_MIN = parseFloat(Q.get("brmin") || "0.137"), BR_MAX = parseFloat(Q.get("brmax") || "0.173");
   function soundFrame() {   // returns the breath time to use for the visuals (null = audio not running)
     if (!SND.started) return null;
     SND.bGain.gain.setTargetAtTime(breathGain(), SND.ctx.currentTime, 0.1);
