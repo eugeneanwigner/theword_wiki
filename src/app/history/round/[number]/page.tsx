@@ -47,7 +47,7 @@ export default async function RoundPage({ params }: Props) {
         <RelatedList
           title="이 라운드의 아이템"
           items={round.items.map((item) => ({
-            href: `/item/${item.slug}`,
+            href: `/history/item/${item.slug}`,
             label: item.title,
             meta: item.grade && `(${item.grade}급)`,
           }))}

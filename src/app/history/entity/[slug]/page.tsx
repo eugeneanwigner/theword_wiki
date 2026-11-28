@@ -37,7 +37,7 @@ export default async function EntityPage({ params }: Props) {
         <RelatedList
           title="연관 항목"
           items={entity.related.map((r) => ({
-            href: `/${r._type}/${r.slug}`,
+            href: `/history/${r._type}/${r.slug}`,
             label: r.title,
             meta: r.titleEn && `(${r.titleEn})`,
           }))}

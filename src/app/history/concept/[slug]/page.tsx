@@ -26,7 +26,7 @@ export default async function ConceptPage({ params }: Props) {
         <RelatedList
           title="연관 항목"
           items={concept.related.map((r) => ({
-            href: `/${r._type}/${r.slug}`,
+            href: `/history/${r._type}/${r.slug}`,
             label: r.title,
             meta: r.titleEn && `(${r.titleEn})`,
           }))}
